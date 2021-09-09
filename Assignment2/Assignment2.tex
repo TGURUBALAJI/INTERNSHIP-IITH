@@ -112,9 +112,8 @@ columns=fullflexible
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
 \numberwithin{equation}
-
 \makeatletter
-\@addtoreset{figure}{problem}
+\addtoreset{}{}
 \makeatother
 \let\StandardTheFigure\thefigure
 \let\vec\mathbf
@@ -145,7 +144,7 @@ https://github.com/TGURUBALAJI/INTERNSHIP-IITH/Assignment2/gbalaji.tex
 \vskip 1cm
 \textbf{2.106 }Find the values of $k$ for which the line
 \begin{align}
-\myvec{k-3 \hspace{3mm}-\myvec{4-k^2}}\vec{x}+k^2-7k+6=0
+\myvec{k-3 \hspace{4mm}-\myvec{4-k^2}}\vec{x}+k^2-7k+6=0
 \end{align}
 is\\
 a) Parallel to the x-axis\\
@@ -155,13 +154,18 @@ c) Passing through the origin\\
 \vskip 0.5cm
 \textbf{Solution} Given equation of the line, 
 \begin{align}
-\myvec{k-3 \hspace{3mm}-\myvec{4-k^2}}\vec{x}+k^2-7k+6=0\label{eq:1}
+\myvec{k-3 \hspace{4mm}-\myvec{4-k^2}}\vec{x}+k^2-7k+6=0\label{eq:1}
 \end{align}
+\begin{center}
+ \begin{sloppypar}of a general line equation\hspace{4mm} ${\vec{nx = }\hspace{2mm}c}$\newline
+here ${\vec{n}=\myvec{k-3 \hspace{3.5mm}-\{4-k^2\}}}$\newline
+and\hspace{4mm} ${c = -k^2+7k-6}$\end{sloppypar}\end{center}
 \begin{enumerate}[label=\emph{\alph*)}]
 \item Parallel to x-axis\\
+$\vec{n}=\myvec{0 & 1}$ if the line is parallel to x-axis\\
 Equation of x-axis is $\myvec{1 & 0}\vec{x}=0$\
 \begin{align}
-  \myvec{1 & 0}\myvec{k-3\\-(4-k^2)} =0
+  \myvec{1 & 0}\myvec{k-3\\-\{4-k^2\}} =0
 \end{align}
 \begin{align}
    k-3=0
@@ -176,6 +180,7 @@ Equation of line is,
 \end{align}
  
 \item Parallel to y-axis\\
+$\vec{n}=\myvec{1 & 0}$ if the line is parallel to y-axis\\
 Equation of y-axis is $\myvec{0 & 1}\vec{x}=0$\\
 \begin{align}
   \myvec{0 & 1}\myvec{k-3\\-(4-k^2)} =0
@@ -196,7 +201,8 @@ Equation of line is,
 \begin{align}
   \myvec{-5 & 0}\vec{x}=-16
 \end{align}
-\item Passing through origin
+\item Passing through origin\\
+${c = 0}$ \hspace{4mm}if the line passes through origin\\
 Equation of line when passing through origin is 
 \begin{align}
 \vec{n}^\top\vec{x}=0
@@ -212,13 +218,11 @@ Hence
     k=1, k=6
 \end{align}
 Substituting $k=1$ in \eqref{eq:1}.
-
 The equation of line is,
 \begin{align}
 \myvec{-2&-3}\vec{x} = 0
 \end{align}
 Substituting $k=6$ in \eqref{eq:1}.
-
 The equation of line is,
 \begin{align}
   \myvec{3 & 32}\vec{x} = 0
