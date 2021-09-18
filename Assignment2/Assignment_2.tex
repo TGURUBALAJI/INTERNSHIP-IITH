@@ -4,12 +4,12 @@
 \usepackage{gensymb}
 
 \singlespacing
-
-
+% \documentclass{article}
+% \usepackage[demo]{graphicx}               
 \usepackage[cmex10]{amsmath}
 
 \usepackage{amsthm}
-
+\usepackage{enumerate}
 \usepackage{mathrsfs}
 \usepackage{txfonts}
 \usepackage{stfloats}
@@ -20,7 +20,7 @@
  
 \usepackage{longtable}
 \usepackage{multirow}
-
+% \ref{fig:x cubed graph}
 \usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{steinmetz}
@@ -105,15 +105,15 @@ columns=fullflexible
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
-	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+ %\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
 \newcommand{\solution}{\noindent \textbf{Solution: }}
 \newcommand{\cosec}{\,\text{cosec}\,}
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
-\numberwithin{equation}{subsection}
+\numberwithin{equation}
 \makeatletter
-\@addtoreset{figure}{problem}
+\addtoreset{}{}
 \makeatother
 \let\StandardTheFigure\thefigure
 \let\vec\mathbf
@@ -135,109 +135,99 @@ Download all python codes from
 \begin{lstlisting}
 https://github.com/TGURUBALAJI/INTERNSHIP-IITH/Assignment2/code
 \end{lstlisting}
-
 %
 and latex-tikz codes from 
 %
 \begin{lstlisting}
 https://github.com/TGURUBALAJI/INTERNSHIP-IITH/Assignment2/gbalaji.tex
 \end{lstlisting}
-
+\vskip 1cm
 \section{\textbf{Question No. 2.106 - LINEAR FORMS}}
-
-Find the values of $k$ for which the line\\
+\textbf{2.106 }Find the values of $k$ for which the line
 \begin{align}
-(k-3-(4-k^2))\vec{x}+k^2-7k+6=0
+\myvec{k-3 & -\myvec{4-k^2}}\vec{x}+k^2-7k+6=0
 \end{align}
 is\\
 a) Parallel to the x-axis\\
 b) Parallel to the y-axis\\
 c) Passing through the origin\\
 %
-
-\section{\textbf {Solution}}
-Given equation of the line, 
-
+\vskip 0.5cm
+\textbf{Solution} Given equation of the line, 
 \begin{align}
-(k-3-(4-k^2))\vec{x}+k^2-7k+6=0\label{eq:1}
+\myvec{k-3 & -\myvec{4-k^2}}\vec{x}+k^2-7k+6=0\label{eq:1}
 \end{align}
-\subsection{ Parallel to x-axis}
-
-Equation of x-axis is $\myvec{1 & 0}\vec{x}=0$\\
-
-
-\begin{align}
-  \myvec{1 & 0}\myvec{k-3\\-(4-k^2)} 
-\implies
-   k-3=0
-\implies
-    k=3
-\end{align}
+\begin{center}
+ \begin{sloppypar}of a general line equation ${\vec{nx} = c}$\newline
+here ${\vec{n} =\myvec{k-3 & -\{4-k^2\}}}$\newline
+and ${c = -k^2+7k-6}$\end{sloppypar}\end{center}
+\begin{enumerate}[label=\emph{\alph*)}]
+\item Parallel to x-axis\\
+$\vec{n}=\myvec{0 & 1}$ if the line is parallel to x-axis\\
+Equation of x-axis is $\myvec{1 & 0}\vec{x}=0$\
+\begin{equation}
+\begin{split}
+  \myvec{1 & 0}\myvec{k-3\\-\{4-k^2\}} & = 0 \label{eq1}\\
+  k-3 & = 0\\
+    \implies k & =3
+\end{split}
+\end{equation}
 Substituting $k=3$ in \eqref{eq:1}\\
 Equation of line is,
-
 \begin{align}
      \myvec{0 & 5}\vec{x}=6
 \end{align}
-
  
-
-\subsection{Parallel to y-axis}
-Equation of y-axis is $\myvec{0 & 1}\vec{x}=0$\\
-
-\begin{align}
-  \myvec{0 & 1}\myvec{k-3\\-(4-k^2)} 
-\implies
-   4-k^2=0
-\implies
-    k=\pm2
-\end{align}
-Substituting $k=2$ in \eqref{eq:1}\\
-Equation of line is,
-
-\begin{align}
-     \myvec{-1 & 0}\vec{x}=12
-\end{align}
-Substituting $k=-2$ in \eqref{eq:1}\\
+\item Parallel to y-axis\\
+$\vec{n}=\myvec{1 & 0}$ if the line is parallel to y-axis\\
+Equation of y-axis is $\myvec{0 & 1}\vec{x} & =0$
+\begin{equation} \label{eq1}
+\begin{split}
+\myvec{0 & 1}\myvec{k-3\\-(4-k^2)} & = 0\\
+ 4-k^2 & =0\\
+ \implies k & =\pm2
+\end{split}
+\end{equation}
+Substituting $k=2$ in \eqref{eq:1}.
 Equation of line is,
 \begin{align}
-  \myvec{-5 & 0}\vec{x}=-16
+     \myvec{-1 & 0}\vec{x} & = 4
 \end{align}
-\subsection{pasing through origin}
+Substituting $k=-2$ in \eqref{eq:1}.
+Equation of line is,
+\begin{align}
+  \myvec{-5 & 0}\vec{x} & =-24
+\end{align}
+\item Passing through origin\\
+${c = 0}$ \hspace{4mm}if the line passes through origin\\
 Equation of line when passing through origin is 
 \begin{align}
-\vec{n}^\top\vec{x}=0
+\vec{n}^\top\vec{x} & =0
 \end{align}
 Hence
-\begin{align}
-    -k^2+7k-6=0
-\end{align}
-\begin{align}
-     (k-1)(k-6)=0
-\end{align}
-
-\begin{align}
-    k=1, k=6
-\end{align}
-Substituting $k=1$ in \eqref{eq:1}\\
-\\
+\begin{equation} \label{eq1}
+\begin{split}
+-k^2+7k-6 & = 0 \\
+ & = -k^2+k+6k-6\\
+ & =(k-1)(k-6)\\
+\implies k&=1, k=6
+\end{split}
+\end{equation}
+Substituting $k=1$ in \eqref{eq:1}.
 The equation of line is,
 \begin{align}
 \myvec{-2&-3}\vec{x} = 0
 \end{align}
-Substituting $k=6$ in \eqref{eq:1}\\
-\\
+Substituting $k=6$ in \eqref{eq:1}.
 The equation of line is,
-
 \begin{align}
   \myvec{3 & 32}\vec{x} = 0
 \end{align}
-
-
+\end{enumerate}
 \begin{figure}[!h]
          \centering
-         \includegraphics[width=\columnwidth]{Plot.jpeg}
-         \caption{Plot of lines}
-         \label{Figure}
+         \includegraphics[width=\columnwidth]{image.png}
+         \caption{Plot of line equations}
+         \label{fig:x cubed graph}
 \end{figure}
 \end{document}
