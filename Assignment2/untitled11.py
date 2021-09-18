@@ -18,18 +18,21 @@ def line_gen(A,B):
     x_AB[:,i]= temp1.T
   return x_AB
 
+labels = ['(0 5)X = 6','(-5 0)X = -24','(1 0)X = -4','(-2 -3)X = 0','(3 32)X = 0']
+l = 0
 ####  a) Line Parallel to x-axix  ######
 #################################################
 ##n=(0  1)if the line is parallel to x-axis
 q = np.dot([1,0],n)   ###Equation of x-axis is(1  0)x=0
-sol= list(solveset(q, k))
+sol= list(solveset(q, k)                                  )
 print(sol)
 for i in sol:
   Eqq = Eq.subs(k,i)
   print(Eqq)
   P1,P2 = np.array([33]+list(solveset(Eqq,y))),np.array([-33]+list(solveset(Eqq,y)))
   x_FP = line_gen(P1,P2)
-  plt.plot(x_FP[0,:],x_FP[1,:],label= Eqq)
+  plt.plot(x_FP[0,:],x_FP[1,:],label= labels[l])
+  l = l + 1
   plt.plot(P1[0], P1[1], 'o')
   plt.text(P1[0] * (1 - 0.1), P1[1] * (1 + 0.1), 'A')
   plt.plot(P2[0], P2[1], 'o')
@@ -46,7 +49,8 @@ for i in sol:
   print(Eqq)
   P1,P2 = np.array(list(solveset(Eqq,x))+[33]),np.array(list(solveset(Eqq,x))+[-33])
   x_FP = line_gen(P1,P2)
-  plt.plot(x_FP[0,:],x_FP[1,:],label= Eqq)
+  plt.plot(x_FP[0,:],x_FP[1,:],label= labels[l])
+  l = l + 1
   plt.plot(P1[0], P1[1], 'o')
   plt.text(P1[0] * (1 - 0.1), P1[1] * (1 + 0.1), 'A')
   plt.plot(P2[0], P2[1], 'o')
@@ -64,7 +68,8 @@ for i in sol:
   Eqqx2= Eqq.subs(x,-33)
   P1,P2 = np.array([33]+list(solveset(Eqqx1,y))),np.array([-33]+list(solveset(Eqqx2,y)))
   x_FP = line_gen(P1,P2)
-  plt.plot(x_FP[0,:],x_FP[1,:],label= Eqq)
+  plt.plot(x_FP[0,:],x_FP[1,:],label= labels[l])
+  l = l + 1
   plt.plot(P1[0], P1[1], 'o')
   plt.text(P1[0] * (1 - 0.1), P1[1] * (1 + 0.1), 'A')
   plt.plot(P2[0], P2[1], 'o')
