@@ -123,7 +123,6 @@ columns=fullflexible
      \def\centbox#1{\makebox[0in]{#1}}
      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
-\vspace{3cm}
 \title{Assignment 2}
 \author{T.Guru Balaji}
 \maketitle
@@ -141,7 +140,6 @@ and latex-tikz codes from
 \begin{lstlisting}
 https://github.com/TGURUBALAJI/INTERNSHIP-IITH/Assignment2/gbalaji.tex
 \end{lstlisting}
-\vskip 1cm
 \section{\textbf{Question No. 2.106 - LINEAR FORMS}}
 \textbf{2.106 }Find the values of $k$ for which the line
 \begin{align}
@@ -152,26 +150,21 @@ a) Parallel to the x-axis\\
 b) Parallel to the y-axis\\
 c) Passing through the origin\\
 %
-\vskip 0.5cm
 \textbf{Solution} Given equation of the line, 
 \begin{align}
-\myvec{k-3 & -\myvec{4-k^2}}\vec{x}+k^2-7k+6=0\label{eq:1}
-\end{align}
-\begin{center}
- \begin{sloppypar}of a general line equation ${\vec{nx} = c}$\newline
-here ${\vec{n} =\myvec{k-3 & -\{4-k^2\}}}$\newline
-and ${c = -k^2+7k-6}$\end{sloppypar}\end{center}
+\myvec{k-3 & -(4-k^2)}\vec{x}+k^2-7k+6=0\label{eq:1}\end{align}
+of a general line equation \begin{align}{\vec{nx} = c}\end{align}\newline
+here \begin{align}{\vec{n} =\myvec{k-3 & -\{4-k^2\}}}\newline\end{align}
+and \begin{align}{c = -k^2+7k-6}\end{align}
 \begin{enumerate}[label=\emph{\alph*)}]
 \item Parallel to x-axis\\
-$\vec{n}=\myvec{0 & 1}$ if the line is parallel to x-axis\\
-Equation of x-axis is $\myvec{1 & 0}\vec{x}=0$\
-\begin{equation}
-\begin{split}
-  \myvec{1 & 0}\myvec{k-3\\-\{4-k^2\}} & = 0 \label{eq1}\\
+\begin{align}
+\vec{n}=\myvec{0 & 1}\end{align}if the line is parallel to x-axis\\
+Equation of x-axis is \begin{align}\begin{split}\myvec{1 & 0}\vec{x}& =0\\
+ \myvec{1 & 0}\myvec{k-3\\-\{4-k^2\}} & = 0 \label{eq1}\\
   k-3 & = 0\\
     \implies k & =3
-\end{split}
-\end{equation}
+\end{split}\end{align}
 Substituting $k=3$ in \eqref{eq:1}\\
 Equation of line is,
 \begin{align}
@@ -179,15 +172,13 @@ Equation of line is,
 \end{align}
  
 \item Parallel to y-axis\\
-$\vec{n}=\myvec{1 & 0}$ if the line is parallel to y-axis\\
-Equation of y-axis is $\myvec{0 & 1}\vec{x} & =0$
-\begin{equation} \label{eq1}
-\begin{split}
-\myvec{0 & 1}\myvec{k-3\\-(4-k^2)} & = 0\\
+ \begin{align}\vec{n} & =\myvec{1 & 0} \end{align} if the line is parallel to y-axis\\
+Equation of y-axis is  \begin{align}\begin{split}\myvec{0 & 1}\vec{x} & =0\\
+\myvec{0 & 1}\myvec{k-3\\-(4-k^2)} & = 0\\ \label{eq1}
  4-k^2 & =0\\
  \implies k & =\pm2
 \end{split}
-\end{equation}
+\end{align}
 Substituting $k=2$ in \eqref{eq:1}.
 Equation of line is,
 \begin{align}
@@ -199,20 +190,20 @@ Equation of line is,
   \myvec{-5 & 0}\vec{x} & =-24
 \end{align}
 \item Passing through origin\\
-${c = 0}$ \hspace{4mm}if the line passes through origin\\
+${c = 0}$ if the line passes through origin\\
 Equation of line when passing through origin is 
 \begin{align}
 \vec{n}^\top\vec{x} & =0
 \end{align}
 Hence
-\begin{equation} \label{eq1}
+\begin{align} \label{eq1}
 \begin{split}
--k^2+7k-6 & = 0 \\
+-k^2+7k-6 & = 0\\
  & = -k^2+k+6k-6\\
  & =(k-1)(k-6)\\
 \implies k&=1, k=6
 \end{split}
-\end{equation}
+\end{align}
 Substituting $k=1$ in \eqref{eq:1}.
 The equation of line is,
 \begin{align}
