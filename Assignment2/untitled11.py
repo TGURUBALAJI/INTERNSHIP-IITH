@@ -4,10 +4,12 @@ import matplotlib.pyplot as plt
 
 x, y, k = symbols('x y k')
 
-Q= [x,y]
+Q= np.array([x,y])
 c = k**2-7*k+6
-n = [k-3,-(4-k**2)]
-Eq = np.dot(n,Q) + c
+n = np.array([k-3,-(4-k**2)])
+# Eq = np.dot(n,Q) + c
+Eq = n@Q
+print(Eq)
 
 def line_gen(A,B):
   len = 10
@@ -23,7 +25,7 @@ l = 0
 ####  a) Line Parallel to x-axix  ######
 #################################################
 ##n=(0  1)if the line is parallel to x-axis
-q = np.dot([1,0],n)   ###Equation of x-axis is(1  0)x=0
+q = np.array([1,0])@n   ###Equation of x-axis is(1  0)x=0
 sol= list(solveset(q, k)                                  )
 print(sol)
 for i in sol:
@@ -41,7 +43,7 @@ for i in sol:
 ####  b) lines parallel to y- axis  ######
 #################################################
 ##n=(1  0)if the line is parallel to y-axis
-q = np.dot([0,1],n)   ###Equation of y-axis is(0  1)x=0
+q = np.array([0,1])@n   ###Equation of y-axis is(0  1)x=0
 sol= list(solveset(q, k))
 print(sol)
 for i in sol:
