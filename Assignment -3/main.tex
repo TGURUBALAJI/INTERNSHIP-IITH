@@ -159,39 +159,39 @@ https://raw.githubusercontent.com/TGURUBALAJI/INTERNSHIP-IITH/main/Assignment%20
 \caption{$transformed \ lines$}
 \label{fig:straight lines}	
 \end{figure}
-\vec{P} =\myvec{1 & cos{(theta)}\\ 0 & sin{(theta)}}\\
-\vec{A} =\myvec{1 & cos{(\ang{60} )}\\ 0 & sin{(\ang{60} )}} \myvec{-3 \\ -2}\\
-\vec{A} =\myvec{-3 -2cos{(\ang{60} )}\\  -2sin{(\ang{60} )}} \\
-\vec{B} =\myvec{1 & cos{(\ang{60} )}\\ 0 & sin{(\ang{60} )}} \myvec{-6 \\ 7}\\
-\vec{B} =\myvec{-6 +7cos{(\ang{60} )}\\  7sin{(\ang{60} )}} \\
+\begin{align}
+\vec{P} &=\myvec{1 & \cos{(theta)}\\ 0 & sin{(theta)}}\\
+\vec{A} &=\myvec{1 & \cos{(\ang{60} )}\\ 0 & sin{(\ang{60} )}} \myvec{-3 \\ -2}\\
+\vec{A} &=\myvec{-3 -2\cos{(\ang{60} )}\\  -2sin{(\ang{60} )}} \\
+\vec{B} &=\myvec{1 & \cos{(\ang{60} )}\\ 0 & sin{(\ang{60} )}} \myvec{-6 \\ 7}\\
+\vec{B} &=\myvec{-6 +7\cos{(\ang{60} )}\\  7sin{(\ang{60} )}} 
+\end{align}
 distance between two points is given by
 \begin{align}
-$||A-B||$ = \sqrt{(A-B)^{T}(A-B)}\\
+$||\vec{A}-\vec{B}||$ &= \sqrt{(\vec{A}-\vec{B})^{T}(\vec{A}-vec{B})}\\
 
-A-B =\myvec{-3 -2cos{(\ang{60} )}\\  -2sin{(\ang{60} )}} - \myvec{-6 +7cos{(\ang{60} )}\\  7sin{(\ang{60} )}}\\
+\vec{A}-\vec{B} &=\myvec{-3 -2\cos{(\ang{60} )}\\  -2\sin{(\ang{60} )}} - \myvec{-6 +7\cos{(\ang{60} )}\\  7\sin{(\ang{60} )}}\\
 
-A-B =\myvec{3 -9cos{(\ang{60} )}\\  -9sin{(\ang{60} )}} 
+\vec{A}-\vec{B} &=\myvec{3 -9\cos{(\ang{60} )}\\  -9sin{(\ang{60} )}} 
 
-$||A-B||$ =\sqrt{\myvec{3-9cos{\ang{60} & -9sin{\ang{60}}}} \ \myvec{3 -9cos{(\ang{60} )}\\  -9sin{(\ang{60} )}} }\\
+$||\vec{A}-\vec{B}||$ &=\sqrt{\myvec{3-9\cos{\ang{60} & -9\sin{\ang{60}}}} \ \myvec{3 -9\cos{(\ang{60} )}\\  -9\sin{(\ang{60} )}} }\\
 
-$||A-B||$=\sqrt{(3-9cos{\ang{60}})^{2}+(-9sin{\ang{60}})^{2})}\\
+$||\vec{A}-\vec{B}||$&=\sqrt{(3-9\cos{\ang{60}})^{2}+(-9\sin{\ang{60}})^{2})}\\
 \end{align}
 
 
 \begin{align}
 
-$||A-B||$ =\sqrt{9+ 81cos^{2}{\ang{60}}-54cos{60}+81sin^{2}{\ang{60}})}\\
+$||\vec{A}-\vec{B}||$ &=\sqrt{9+ 81\cos^{2}{\ang{60}}-54\cos{60}+81\sin^{2}{\ang{60}})}\\
 
-$||A-B||$ =\sqrt{9+ 81-54cos{60}}\\	
+$||\vec{A}-\vec{B}||$ &=\sqrt{9+ 81-54\cos{60}}\\	
 
-$||A-B||$ =\sqrt{90 - 27}\\	
+$||\vec{A}-\vec{B}||$ &=\sqrt{90 - 27}\\	
 
-$||A-B||$ =\sqrt{63}\\	
+$||\vec{A}-\vec{B}||$ &=\sqrt{63}\\	
 
-$||A-B||$ =7.9372\\	
+$||\vec{A}-\vec{B}||$ &=7.9372	
 
-distance between two points is 7.9372 .
+Distance between two points is 7.9372 .
 \end{align}
-
-
 \end{document}
